@@ -18,7 +18,5 @@ public class DeleteAction extends EditorAction {
             char ch = actionEvent.getActionCommand().charAt(0);
             doc.deleteChar(ch);
         }
-
-
     }
 

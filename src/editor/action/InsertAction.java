@@ -32,9 +32,5 @@ public class InsertAction extends EditorAction {
         Document doc = editor.getDocument();
         char ch = ae.getActionCommand().charAt(0);
         doc.insertChar(ch);
-        
-
     }
-
-
 }

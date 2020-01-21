@@ -16,6 +16,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.security.Key;
+import java.util.Arrays;
 import java.util.Scanner;
 import javax.swing.ActionMap;
 import javax.swing.InputMap;
@@ -73,6 +74,8 @@ public class Editor extends JFrame {
         inputMap = display.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
         actionMap = display.getActionMap();
         addKeyMappings();
+        System.out.println(Arrays.toString(inputMap.allKeys()));
+        System.out.println(Arrays.toString(actionMap.allKeys()));
         setResizable(false);
         pack();
     }
@@ -107,7 +110,6 @@ public class Editor extends JFrame {
             EditorAction action = new InsertAction(name, this);
             addKeyMapping(KeyStroke.getKeyStroke(ch), action);
         }
-
         char ch = '\b';
 
 
