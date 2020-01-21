@@ -47,11 +47,11 @@ public class Document {
 
     public void deleteChar(char c) {
         data[cursorRow][cursorCol] = c;
-        display.displayChar(' ',cursorRow,cursorCol);
+        display.displayChar(c,cursorRow,cursorCol);
         cursorCol--;
         if (cursorCol >= CharacterDisplay.WIDTH) {
             cursorCol = 0;
-            cursorRow++;
+            cursorRow--;
         }
     }
 }

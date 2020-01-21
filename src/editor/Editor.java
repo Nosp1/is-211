@@ -5,6 +5,7 @@
  */
 package editor;
 
+import editor.action.DeleteAction;
 import editor.action.EditorAction;
 import editor.action.InsertAction;
 import editor.display.CharacterDisplay;
@@ -111,7 +112,7 @@ public class Editor extends JFrame {
 
 
         String name = "deleteChar";
-        EditorAction action = new InsertAction(name, this);
+        EditorAction action = new DeleteAction(name, this);
         addKeyMapping(KeyStroke.getKeyStroke(ch),action);
 
     }

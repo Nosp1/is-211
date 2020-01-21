@@ -36,9 +36,5 @@ public class InsertAction extends EditorAction {
 
     }
 
-    public void actionDeleted(ActionEvent ae) {
-        Document doc = editor.getDocument();
-        char ch = ae.getActionCommand().charAt(0);
-        doc.deleteChar(ch);
-    }
+
 }
