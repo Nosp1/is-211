@@ -111,8 +111,6 @@ public class Editor extends JFrame {
             addKeyMapping(KeyStroke.getKeyStroke(ch), action);
         }
         char ch = '\b';
-
-
         String name = "deleteChar";
         EditorAction action = new DeleteAction(name, this);
         addKeyMapping(KeyStroke.getKeyStroke(ch),action);

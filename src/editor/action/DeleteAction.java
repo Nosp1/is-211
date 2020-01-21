@@ -15,8 +15,7 @@ public class DeleteAction extends EditorAction {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
             Document doc = editor.getDocument();
-            char ch = actionEvent.getActionCommand().charAt(0);
-            doc.deleteChar(ch);
+            doc.deleteChar(' ');
         }
     }
 

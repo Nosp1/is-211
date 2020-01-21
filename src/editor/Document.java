@@ -32,23 +32,19 @@ public class Document {
     public void insertChar(char c) {
         data[cursorRow][cursorCol] = c;
         System.out.println("value of c " + c);
-        if (c == ' ') {
-            deleteChar(c);
-        } else {
-            System.out.println("value of c " + c);
-            display.displayChar(c, cursorRow, cursorCol);
-            cursorCol++;
-            if (cursorCol >= CharacterDisplay.WIDTH) {
-                cursorCol = 0;
-                cursorRow++;
-            }
+        display.displayChar(c, cursorRow, cursorCol);
+        cursorCol++;
+        if (cursorCol >= CharacterDisplay.WIDTH) {
+            cursorCol = 0;
+            cursorRow++;
         }
     }
 
+
     public void deleteChar(char c) {
-        data[cursorRow][cursorCol] = c;
-        display.displayChar(c,cursorRow,cursorCol);
         cursorCol--;
+        data[cursorRow][cursorCol] = c;
+        display.displayChar(c, cursorRow, cursorCol);
         if (cursorCol >= CharacterDisplay.WIDTH) {
             cursorCol = 0;
             cursorRow--;
